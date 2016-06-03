@@ -1,0 +1,94 @@
+<html>
+<head>
+ <link rel="stylesheet" href="assets/libs/jquery.mCustomScrollbar.css">
+ <style>
+   .container {
+     width:500px;
+     margin:50px auto;
+   }
+   #Msg {
+     width:450px;
+     height:150px;
+	 font-family:arial;
+	 font-size:14.5px;
+	 letter-spacing:1px;
+	 line-height:1.5em;
+	 text-align:justify;
+	 <!-- overflow:auto; -->
+   }
+   #btnAdd {
+     margin-top:10px;
+   }  
+ </style>
+</head>
+<body>
+
+  <div class="container">
+
+	  <div id="Msg">
+		 The polls app is now complete. Make sure that mongod is still running, and run the Node application again in Eclipse. 
+		 Point your browser at http://localhost:3000, and navigate to a poll and vote. You should see the result. 
+		 To see the real-time updates, find your local IP address and replace localhost with it. Then navigate to it using a 
+		 different machine or even a smartphone or tablet device on your local network. When you vote on another device, the result will be 
+		 shown there, and the result will also be pushed out to your main computer's browser automatically.
+	  </div>  
+	  
+	  <button id="btnAdd">Add New Message</button>
+  
+  </div>
+
+  
+  <script src="assets/libs/jquery-1.11.2.min.js"></script>
+  <script src="assets/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script>
+  
+    $(function(){
+	
+	  
+	     $("#Msg").mCustomScrollbar({
+			autoHideScrollbar:true,
+			scrollbarPosition:"outside",
+			scrollButtons:{
+			 enable:false
+			},
+			scrollnertia:0,
+			advanced:{
+			  autoScrollOnFocus:false,
+			  updateOnContentResize:true
+			}
+		  });
+	  
+		  $("#btnAdd").click(function(){  
+		  	
+			var content = '';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 content += 'The polls app you have just created is a decent starting point, but there is much that can be improved.';
+			 
+			$("#Msg").mCustomScrollbar("destroy");	
+			$("#Msg").html(content);	
+			
+			  
+			 $("#Msg").mCustomScrollbar({
+				autoHideScrollbar:true,
+				scrollbarPosition:"outside"
+			  });		
+				 
+
+		  });
+	
+	});
+  
+  </script>
+</body>
+</html>
